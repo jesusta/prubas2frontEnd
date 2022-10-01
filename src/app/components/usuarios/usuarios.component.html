@@ -1,0 +1,56 @@
+<table class="table table-dark table-striped" style="width: 40%; margin: 2% 0 0 3%;">
+    <thead>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Usuario:</th>
+            <td>{{usuario.id}}- {{usuario.nombres}} {{usuario.apellidos}}</td>
+          </tr>
+      <tr>
+        <th scope="row">Telefono:</th>
+        <td>{{usuario.telefono}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Direccion:</th>
+        <td>{{usuario.direccion}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Prestamo ID:</th>
+        <td colspan="2">{{prestamo.id}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Fecha de prestamo:</th>
+        <td colspan="2">{{prestamo.entrega}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Fecha de devolucion:</th>
+        <td colspan="2">{{prestamo.devolucion}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <h4 style="margin: 4% 0 0 3%;"> Detalle prestamo</h4>
+
+  <table class="table table-dark table-striped" style="width: 60%; margin: 1% 0 0 3%;">
+    <thead>
+      <tr>
+        <th scope="col">Codigo</th>
+        <th scope="col">Libro</th>
+        <th scope="col">Precio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let item of detalle_pretamo">
+        <th scope="row">{{item.id}}</th>
+        <td>{{item.titulo}}</td>
+        <td>{{item.precio}}</td>
+      </tr>
+      
+    </tbody>
+  </table>
+
+  <div class="container">
+    <h4> Numero de libros {{nu_libro}} ,valor total es : {{total}}</h4>
+  </div>
+  

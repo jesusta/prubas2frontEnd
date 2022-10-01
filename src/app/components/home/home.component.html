@@ -1,0 +1,12 @@
+<div class="card text-white bg-dark mb-3" style="max-width: 40%; margin: 12% 0 0 32%;">
+    <div class="card-body">
+      <h4 style="margin: 6% 2% 0 0;"> USUARIOS </h4>
+      <div class="input-group mb-3">
+        <select  [(ngModel)]="idpersona" class="form-select"  style="margin: -6.5% 0 0 25%; width: 3%;">
+            <option selected [value]="-1"  disabled >Seleccione el usuario</option>
+            <option [value]="item.id" *ngFor="let item of usuarios">{{item.nombres}} {{item.apellidos}}</option>
+          </select>
+          <button type="button"  class="btn btn-secondary" (click)="inf_usuario()"style="margin: -6.5% 0 0 6%;">Consultar</button>
+      </div>
+    </div>
+  </div>
